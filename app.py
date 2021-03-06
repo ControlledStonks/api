@@ -11,3 +11,12 @@ app = Flask(__name__)
 @app.route('/emote.json')
 def emote_json():
     return jsonify(memcache.get('emote'))
+
+
+@app.route('/')
+def e():
+    return 'e'
+
+
+if __name__ == '__main__':
+    app.run()
